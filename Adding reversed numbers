@@ -1,0 +1,25 @@
+Given 2 numbers.Find the sum of its reverse numbers.
+Example
+Sample input: 
+3
+24 1
+4358 754
+305 794
+
+Sample output:
+34
+1998
+1
+====
+def f(n):
+	rev=0
+	while n>0:
+		rem=n%10
+		rev=rev*10+rem
+		n=n//10
+	return rev
+n=int(input())
+for i in range(n):
+	x,y=map(int,input().split())
+	z=f(f(x)+f(y))
+	print(z) 
