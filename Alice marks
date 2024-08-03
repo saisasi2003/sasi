@@ -1,0 +1,17 @@
+Alice and Marks
+Alice has scored X marks in her test and Bob has scored Y marks in the same test. Alice is happy if she scored at least twice the marks of Bob’s score. Determine whether she is happy or not.
+input
+1 2 
+output
+no
+
+input
+2 1 
+output
+yes
+====
+x,y = map(int,input().split())
+if x>=2*y:
+    print("Yes")
+else:
+    print("nO")
