@@ -1,0 +1,33 @@
+There is a string, s. of lowercase English letters that is repeated infinitely many times. Given an integer, n, find and print the number of letter a's in the first n letters of the infinite string.
+
+Example
+s = 'abcac'
+n = 10
+
+The substring we consider is abcacabcac, the first 10 characters of the infinite string. There are 4 occurrences of a in the substring.
+Problem
+
+Input
+aba 
+10
+Output 
+7
+Explanation 
+The first a 10 letters of the infinite string are abaabaabaa Because there are 7 a's, we return 7.
+=====
+def f(s,x):
+    ct=0
+    for i in range(len(s)):
+        if s[i]==x:
+            ct+=1
+    r=n//len(s)
+    ct=ct*r
+    l=n%len(s)
+    for i in range(l):
+        if s[i]==x:
+            ct+=1
+    return ct
+st=input()
+n=int(input())
+ans=f(st,'a')
+print(ans)
