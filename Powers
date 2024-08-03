@@ -1,0 +1,31 @@
+'''a,b=map(int,input().split())
+for i in range(a,b):
+    c=0
+    while i%2==0:
+        n=n//2
+        c+=1
+    
+    '''
+def count_factors_of_two(n):
+    count = 0
+    while n % 2 == 0:
+        n //= 2
+        count += 1
+    return count
+
+def max_exponent_of_2(a, b):
+    max_exponent = 0
+    number_with_max_exponent = a
+    for num in range(a, b + 1):
+        exponent = count_factors_of_two(num)
+        if exponent > max_exponent:
+            max_exponent = exponent
+            number_with_max_exponent = num
+
+    return number_with_max_exponent
+
+# Example usage
+a = 7
+b = 12
+result = max_exponent_of_2(a, b)
+print(f"The number between {a} and {b} with the maximum exponent of 2 is: {result}")
