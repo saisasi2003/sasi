@@ -1,0 +1,29 @@
+The function accepts a string  ‘ str’ of length n and two characters ‘ch1’ and ‘ch2’ as its arguments . Implement the function to modify and return the string ‘ str’ in such a way that all occurrences of ‘ch1’ in original string are replaced by ‘ch2’ and all occurrences of ‘ch2’  in original string are replaced by ‘ch1’.
+
+Assumption: String Contains only lower-case alphabetical letters.
+
+Note:
+
+Return null if string is null.
+If both characters are not present in string or both of them are same , then return the string unchanged.
+Example:
+
+Input:
+Str: apples
+ch1:a
+ch2:p
+Output:
+paales
+======
+s=input()
+c1,c2=map(str,input().split())
+l=[]
+for i in s:
+    if i==c1:
+        l.append(c2)
+    elif i==c2:
+        l.append(c1)
+    else:
+        l.append(i)
+for i in l:
+    print(i,end="")
