@@ -1,0 +1,34 @@
+Given a string S of length N. You can apply the following operations any number of times:
+
+1. In one operation you can remove any one occurrence of substring "AB" from S.
+2. In one operation you can remove any one occurrence of substring "CD" from S.
+Print the minimum possible length of the resulting string that you can obtain.
+
+Note: The string concatenates after removing the substring and could produce new "AB" or "CD" substrings.
+
+Input
+CCAAABBBDE
+Output
+2
+
+Explanation
+You can apply the following operations to the given string:
+1st operation: Remove AB from the string, and the string becomes 'CCAABBDE.'
+2nd operation: Remove AB from the string, and the string becomes 'CCABDE.'
+3rd operation: Remove AB from the string, and the string becomes 'CCDE.'
+4th operation: Remove CD from the string, and the string becomes 'CE.'
+Furthermore, we cannot apply any more operations, and the minimum possible length is 2.
+======
+def f(s):
+    l=[]
+    for i in s:
+        if i=='B' and l and l[-1]=='A':
+            l.pop()
+        elif i=='D' and l and l[-1]=='C':
+            l.pop()
+        else:
+            l.append(i)
+    return len(l)
+s=input()
+ans=f(s)
+print(ans)
