@@ -1,0 +1,8 @@
+Given two integers A and B, compute A power B without inbuilt functions.
+input
+2 3
+output
+8
+====
+a,b=map(int,input().split())
+print(a**b)
