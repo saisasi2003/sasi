@@ -1,0 +1,18 @@
+Given a sequence of integers a,a triplet (a[i],a[j],a[k]) is beautiful if
+1.i<j<k
+2.a[j]-a[i]==a[k]-a[j]==d
+
+Given an increasing sequence of integers and the value of d.count the number of beautiful triplets in the sequence
+
+Example
+
+α= [1,2,3,4,5 ]
+d=1
+====
+n,d=map(int,input().split())
+a=list(map(int,input().split()))
+c=0
+for i in a:
+    if i+d in a and i+2*d in a:
+                    c+=1
+print(c)
