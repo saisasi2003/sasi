@@ -1,0 +1,24 @@
+Battery Health
+Apple considers any iPhone with a battery health of 80% or above, to be in optimal condition.
+Given that your iPhone has X% battery health, find whether it is in optimal condition.
+
+input
+4
+97
+42
+80
+10
+
+output
+YES
+NO
+YES
+NO
+====
+t=int(input())
+for i in range(t):
+    x=int(input())
+    if x>=80:
+        print("YES")
+    else:
+        print("NO")
