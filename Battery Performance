@@ -1,0 +1,22 @@
+Battery Low
+Chef's phone shows a Battery Low notification if the battery level is 15% or less.Given that the battery level of Chef's phone is X%, determine whether it would show a Battery low notification.
+
+input
+3
+15
+3
+65
+
+output
+Yes
+Yes
+No
+
+=======
+t=int(input())
+for i in range(t):
+    x=int(input())
+    if x<=15:
+        print("YES")
+    else:
+        print("NO")
