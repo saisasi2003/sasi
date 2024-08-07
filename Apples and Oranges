@@ -1,0 +1,17 @@
+Apples and Oranges
+Bob has X  rupees and goes to a market. The cost of apples is Rs. A per kg and the cost of oranges is Rs B per kg.
+Determine whether he can buy at least 1 kg each of apples and oranges.
+
+input
+14 
+2 2
+output
+Yes
+======
+t=int(input())
+x,y=map(int,input().split())
+if x+y<=t:
+    print('Yes')
+else:
+    print("No")
+
