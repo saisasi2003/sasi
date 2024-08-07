@@ -1,0 +1,9 @@
+Print the area of the rectangle, given its length and breadth.
+
+input
+2 3
+output
+6
+===
+l,b=map(int,input().split())
+print(l*b)
