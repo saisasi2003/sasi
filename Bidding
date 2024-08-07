@@ -1,0 +1,29 @@
+Bidding
+Alice, Bob and Charlie are bidding for an artifact at an auction.
+Alice bids A rupees, Bob bids B rupees, and Charlie bids C rupees (where A, B, and C are distinct).
+According to the rules of the auction, the person who bids the highest amount will win the auction.
+Determine who will win the auction.
+
+input
+4
+200 100 400
+155 1000 566
+736 234 470
+124 67 2
+
+output
+Charlie
+Bob
+Alice
+Alice
+
+=====
+t=int(input())
+for i in range(t):
+    a,b,c=map(int,input().split())
+    if a>b and a>c:
+        print("Alice")
+    elif b>a and b>c:
+        print("Bob")
+    elif c>a and c>b:
+        print("Charlie")
