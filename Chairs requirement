@@ -1,0 +1,26 @@
+Chairs Requirement
+Chef's coding class is very famous in Chefland.This year X students joined his class and each student will require one chair to sit on. Chef already has Y chairs in his class. Determine the minimum number of new chairs Chef must buy so that every student is able to get one chair to sit on.
+
+input
+4
+20 14
+41 41
+35 0
+50 100
+
+output
+6
+0
+35
+0
+
+======
+t=int(input())
+for i in range(t):
+    x,y=map(int,input().split())
+    if x>y:
+        print(x-y)
+    elif x==y:
+        print("0")
+    elif x<y:
+        print("0")
