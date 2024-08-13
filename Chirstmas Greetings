@@ -1,0 +1,15 @@
+Christmas Greetings
+Christmas is celebrated on 25th December every year.
+
+You are given a day X in December. Determine whether it is Christmas.
+Print CHRISTMAS if it is Christmas. Otherwise print ORDINARY.
+input
+12
+output
+ORDINARY
+====
+x=int(input())
+if x==25:
+    print("CHRISTMAS")
+else:
+    print("ORDINARY")
