@@ -1,0 +1,22 @@
+Counting Words
+Harsh was recently gifted a book consisting of N pages. Each page contains exactly M words printed on it. As he was bored, he decided to count the number of words in the book.
+Help Harsh find the total number of words in the book.
+
+input
+4
+1 1
+4 2
+2 4
+95 42
+
+output
+1
+8
+8
+3990
+
+======
+t=int(input())
+for i in range(t):
+    n,m=map(int,input().split())
+    print(n*m)
