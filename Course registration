@@ -1,0 +1,22 @@
+Course Registration
+There is a group of N friends who wish to enroll in a course together. The course has a maximum capacity of M students that can register for it.If there are K other students who already enrolled in the course,determine if it will still be possible for all N friends to do so or not.
+
+input
+3
+2 50 27
+5 40 38
+100 100 0
+
+output
+Yes
+No
+Yes
+
+====
+t=int(input())
+for i in range(t):
+    n,m,k=map(int,input().split())
+    if m-k>=n:
+        print("YES")
+    else:
+        print("NO")
