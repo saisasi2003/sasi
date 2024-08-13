@@ -1,0 +1,27 @@
+Given a matrix of size N x M, print column-wise sum, separated by a newline.
+
+Input Format
+The first line of input contains N, M - the size of the matrix. Its followed by N lines each containing M integers - elements of the matrix.
+
+Output Format
+Print column-wise sum of the matrix, separated by newline.
+
+Sample Input 0
+2 2
+5 -1
+19 8
+
+Sample Output 0
+24
+7
+
+===
+n,m=map(int,input().split())
+mat=[]
+tmat=[]
+for i in range(n):
+    row=list(map(int,input().split()))
+    mat.append(row)
+tmat=list(map(list,zip(*mat)))
+for i in tmat:
+    print(sum(i))
