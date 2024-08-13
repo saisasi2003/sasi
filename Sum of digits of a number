@@ -1,0 +1,15 @@
+Given a non-negative integer - N, print the sum of digits of the given number.
+Input
+164
+Output
+11
+Explanation
+1 + 6 + 4 = 11
+======
+n=int(input())
+s=0
+while n>0:
+    rem=n%10
+    s=s+rem
+    n=n//10
+print(s)
