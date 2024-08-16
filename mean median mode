@@ -1,0 +1,20 @@
+Given a sorted array A, containing N integers. Calculate and print their Mean, Median and Mode.
+1. For both the Mean and Median, display the values with precision up to two decimal places.
+2. Print the first Mode that you encounter from the left hand side.
+Input
+8
+1 2 3 4 5 5 6 6
+Output
+4.00 4.50 5
+=====
+n=int(input())
+l=list(map(int,input().split()))
+sum1=sum(l)
+mean=sum1/n
+s=sorted(l)
+if n%2==0:
+    median=(s[n//2-1]+s[n//2])/2
+else:
+    median=s[n//2]
+mode=max(set(l),key=l.count)
+print("{:.2f} {:.2f} {}".format(mean,median,int(mode)))
