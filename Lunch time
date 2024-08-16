@@ -1,0 +1,23 @@
+Lunchtime
+Chef has his lunch only between 1pm to 4 pm.Given that the current time is 
+𝑋pm find out whether it is lunchtime for Chef.
+
+input
+3
+1
+7
+3
+
+output
+YES
+NO
+YES
+
+===
+t=int(input())
+for i in range(t):
+    x=int(input())
+    if x==1 or x==2 or x==3 or x==4:
+        print("YES")
+    else:
+        print("NO")
