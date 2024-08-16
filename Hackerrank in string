@@ -1,0 +1,22 @@
+We say that a string contains the word hackerrank if a subsequence of its characters spell the word hackerrank. Remeber that a subsequence maintains the order of characters selected from a sequence.
+More formally, let p[0],p[1],--,p[9] be the respective indices of h, a, c, k, e, r, r, a, n, k in string s.If p[0]<p[1]<p[2]<..<p[9] is true, then s contains hackerrank.
+For each query, print YES on a new line if the string contains hackerrank, otherwise, print NO.
+
+Example
+This contains a subsequence of all of the characters in the proper order. Answer YES
+This is missing the second 'r'. Answer NO.
+====
+def f(s):
+    s1="hackerrank"
+    t=0
+    for i in s:
+        if i==s1[t]:
+            t+=1
+        if t==len(s1):
+            return "YES"
+    return "NO"
+n=int(input())
+for a in range(n):
+    s=input()
+    ans=f(s)
+    print(ans)
