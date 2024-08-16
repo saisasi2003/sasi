@@ -1,0 +1,25 @@
+Given a string, print all the letters present at the odd index, followed by the letters present at the even index.
+Input
+afdg5tg
+Output
+fgtad5g
+=====
+s=input()
+oddchar=s[1::2]
+evenchar=s[::2]
+finalstr=oddchar+evenchar
+print(finalstr)
+
+
+or
+
+
+s=input()
+s1=""
+s2=""
+for i in range(len(s)):
+    if i%2!=0:
+        s1+=s[i]
+    elif i%2==0:
+        s2+=s[i]
+print("%s%s"%(s1,s2))
