@@ -1,0 +1,13 @@
+Given N and M, print the following rectangle pattern of size N × M. See examples for more details.
+Input
+3 5
+Output
+*****
+*****
+*****
+===
+n,m=map(int,input().split())
+for i in range(n):
+    for j in range(m):
+        print("*",end="")
+    print(" ")
