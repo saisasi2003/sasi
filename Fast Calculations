@@ -1,0 +1,26 @@
+Input
+Multiply the given numbers.
+
+Output
+The results of multiplications.
+
+Example
+Input:
+5
+4 2
+123 43
+324 342
+0 12
+9999 12345
+
+Output:
+8
+5289
+110808
+0
+123437655
+==========
+t=int(input())
+for i in range(t):
+	a,b=map(int,input().split())
+	print(a*b) 
