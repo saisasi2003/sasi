@@ -1,0 +1,37 @@
+Morse Codes 
+Given an array of strings A, where each string can be formed by combining the Morse code representation of individual letters.
+
+[".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+
+The full table for the 26 letters of the English alphabet is given above. For example, "abc" can be written as ".--...-.-.", which is the concatenation of ".-", "-...", and "-.-.". We will call such a concatenation the transformation of a word. Print the number of different transformations among all A we have.
+
+Example
+Input
+4
+abc bze abnn xyz
+Output
+3
+Explanation
+"abc" -> ".--...-.-."
+"bze" -> "-...--..."
+"adek" -> ".--...-.-."
+"xyz" -> "-..--.----.."
+There are 3 different transformations: ".--...-.-." , "-...--..." and "-..--.----..".
+===================
+def f(s):
+    d={
+        'a':".-",'b':"-...",'c':"-.-.",'d':"-..",'e':".",'f':"..-.",
+        'g':"--.",'h':"....",'i':"..",'j':".---",'k':"-.-",'l':".-..",
+        'm':"--",'n':"-.",'o':"---",'p':".---",'q':"--.-",'r':".-.",
+        's':"...",'t':"-",'u':"..-",'v':"...-",'w':".---",'x':"-..-",
+        'y':"-.--",'z':"--.."
+        }
+    ts=set()
+    for i in s:
+        t=''.join(d[j]for j in i)
+        ts.add(t)
+    return len(ts)
+n=int(input())
+s=input().strip().split()
+ans=f(s)
+print(ans)
