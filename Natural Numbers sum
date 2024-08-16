@@ -1,0 +1,12 @@
+Given positive integer - N, print the sum of the first N natural numbers.
+Input
+4
+Output
+10
+===
+n=int(input())
+c=0
+for i in range(1,n+1):
+    c+=i
+print(c)
+
