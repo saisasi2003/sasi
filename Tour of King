@@ -1,0 +1,22 @@
+Tour of King
+King loves to go on tours with his friends.
+King has N  cars that can seat 5 people each and M cars that can seat 7 people each. Determine the maximum number of people that can travel together in these cars.
+
+input
+4
+4 8
+2 13
+14 5
+8 8
+
+output
+76
+101
+105
+96
+
+======
+t=int(input())
+for i in range(t):
+    n,m=map(int,input().split())
+    print((n*5)+(m*7))
