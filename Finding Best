@@ -1,0 +1,27 @@
+Best of Two
+Chef took an examination two times. In the first attempt, he scored 
+𝑋
+X marks while in the second attempt he scored 
+𝑌
+Y marks. According to the rules of the examination, the best score out of the two attempts will be considered as the final score.
+
+Determine the final score of the Chef.
+input
+4
+40 60
+67 55
+50 50
+1 100
+output
+60
+67
+50
+100
+=======
+t=int(input())
+for i in range(t):
+    x,y=map(int,input().split())
+    if x>=y:
+        print(x)
+    elif x<y:
+        print(y)
