@@ -1,0 +1,22 @@
+Final Population
+There were initially X million people in a town, out of which Y million people left the town and Z million people immigrated to this town.
+Determine the final population of town in millions.
+
+input
+4
+3 1 2
+2 2 2
+4 1 8
+10 1 10
+
+output
+4
+2
+11
+19
+
+=====
+t=int(input())
+for i in range(t):
+    x,y,z=map(int,input().split())
+    print(x-y+z)
