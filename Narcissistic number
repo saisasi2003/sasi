@@ -1,0 +1,25 @@
+Given an integer N, check whether it is a Narcissistic number or not.
+
+Note that a Narcissistic number is a number that is the sum of its own digits each raised to the power of the number of digits
+Input
+8208
+Output
+Yes
+Explanation
+84 + 24 + 04 + 84 = 8208
+======
+n=int(input())
+t1=t2=n
+c=s=0
+while n>0:
+    r=n%10
+    n=n//10
+    c+=1
+while t1>0:
+    a=t1%10
+    s+=a**c
+    t1=t1//10
+if t2==s:
+    print("Yes")
+else:
+    print("No")
