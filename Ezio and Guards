@@ -1,0 +1,22 @@
+Ezio and Guards
+Ezio can manipulate at most X number of guards with the apple of eden.Given that there are y number of guards,predict if he safely manipulate all of them.
+
+input
+3
+5 7
+6 6
+9 1
+
+output
+NO
+YES
+YES
+
+=====
+t=int(input())
+for i in range(t):
+    x,y=map(int,input().split())
+    if x>=y:
+        print("YES")
+    else:
+        print("NO")
