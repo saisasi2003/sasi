@@ -1,0 +1,15 @@
+Food Costs
+You're a bit all over the place as a college student. You used to eat out at expensive restaurants almost every day until your parents gave you a talking-to about being irresponsible. Now, you've got to control your eating and spending habits.
+
+So, here's the plan: you'll stick to the college mess for your meals every day, except Sundays. On Sundays, you're treating yourself to those fancy restaurant meals.
+The cost is Rs.X for the mess food each day, and Rs.y for the restaurant splurges.
+
+Now, what's the cost of food per week? Note that you don't have to pay for the mess on Sundays.
+A week has seven days, as usual.
+input
+100 500
+output
+1100
+====
+x,y=map(int,input().split())
+print(x*6+y)
