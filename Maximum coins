@@ -1,0 +1,23 @@
+Chef and Chefina are playing a series of N games.Each game has a winner. For the 𝑖𝑡ℎ(1≤𝑖≤𝑁)i th  (1≤i≤N) game, the loser pays 2 power i  coins to the winner.
+Find the maximum number of coins Chef can get if he wins exactly X games                                   Input
+3		Output
+2 1		2
+2 2		6
+4 1		2
+Explanation:
+Test case 1: Chef can win maximum coins if he loses the first game and wins the second game. Thus, Chef will pay  2 power1=2 coins for the first game and receive 2 power 2=4 coins for the second game, leading to a total of 4−2=2 coins.
+
+Test case 2: Chef wins both games and gets a total of 2+4=6 coins.
+
+Test case 3: Chef will lose the first three games and win the last game. Thus, total coins he receives is 16−8−4−2=2.
+====
+r=[]
+t=int(input())
+for i in range(t):
+    n,x=map(int,input().split())
+    cv=[2**i for i in range(1,n+1)]
+    cv.sort(reverse=True)
+    cw=sum(cv[:x])
+    cl=sum(cv[x:])
+    mc=cw-cl
+    print(mc)
