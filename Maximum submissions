@@ -1,0 +1,23 @@
+Maximum Submissions
+A participant can make 1 submission every 30 seconds. If a contest lasts for 𝑋 minutes, what is the maximum number of submissions that the participant can make during it?
+It is also given that the participant cannot make any submission in the last 5 seconds of the contest.
+
+input
+4
+1
+2
+3
+4
+
+output
+2
+4
+6
+8
+
+======
+t=int(input())
+for i in range(t):
+    x=int(input())
+    t1=x*60
+    print(t1//30)
