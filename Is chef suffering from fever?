@@ -1,0 +1,22 @@
+Fever
+Chef is not feeling well today. He measured his body temperature using a thermometer and it came out to be X F.A person is said to have fever if his body temperature is strictly greater than 98 F.
+Determine if Chef has fever or not.
+
+input
+3
+98
+100
+96
+
+output
+NO
+YES
+NO
+=======
+t=int(input())
+for i in range(t):
+    x=int(input())
+    if x>98:
+        print("YES")
+    else:
+        print("NO")
