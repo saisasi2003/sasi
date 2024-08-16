@@ -1,0 +1,27 @@
+Given an array of elements containing 0's and 1's. You have to find the length of longest contiguous 1's.
+
+Input Format
+First line of input contains N - size of the array. The next line contains the N integers of array A.
+
+Output Format
+Print the length of longest contiguous 1's.
+
+Sample Input 0
+10
+1 0 0 1 0 1 1 1 1 0 
+
+Sample Output 0
+4
+====
+n=int(input())
+li=[]
+c=0
+l=list(map(int,input().split()))
+for i in l:
+    if i==0:
+        c=0
+    elif i==1:
+        c=c+1
+    li.append(c)
+li.sort()
+print(li[len(li)-1])
