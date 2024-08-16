@@ -1,0 +1,22 @@
+Given an integer N, check whether it is a Harshad number or not.
+
+Note that a Harshad number is an integer, that is divisible by the sum of its digits.
+Input
+18
+Output
+Yes
+Explanation
+18 / (1 + 8) = 2
+As 18 is divisible by the sum of its digits, it is a Harshad number.
+=====
+n=int(input())
+c=0
+t1=n
+while n>0:
+    r=n%10
+    c+=r
+    n=n//10
+if t1%c==0:
+    print("Yes")
+else:
+    print("No")
