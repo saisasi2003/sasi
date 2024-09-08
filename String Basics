@@ -1,0 +1,11 @@
+public class StringExample {
+
+    // Main Function
+    public static void main(String args[])
+    {
+        String str = new String("A");
+        String str1="C";
+        String s=str+str1;
+        System.out.println(s);
+    }
+}
